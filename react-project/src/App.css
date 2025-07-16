@@ -1,0 +1,45 @@
+/* App.css — Classy & Chic Layout */
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #bbbbbb;
+  font-family: 'Poppins', sans-serif;
+  color: #2c2c2c;
+}
+
+#root {
+  min-height: 100vh;
+  
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+}
+
+.page-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 32px 16px;
+}
+
+.dark-mode .dark-toggle-btn {
+  color: #f5f5f5;
+}
+body.dark-mode {
+  background-color: #121212 !important; /* Koyu arka plan */
+  color: #f73e3e; /* Genel yazı rengi */
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
