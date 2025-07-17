@@ -40,6 +40,44 @@ body {
 }
 body.dark-mode {
   background-color: #121212 !important; /* Koyu arka plan */
-  color: #f73e3e; /* Genel yazı rengi */
+  
   transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.drawer .MuiDrawer-paper {
+  
+  background-color: #636363; /* Arka plan rengi */
+  
+  box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1); /* Hafif gölge */
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+.drawer .MuiBackdrop-root {
+  background-color: rgba(0, 0, 0, 0.3); /* Arka plan karartma */
+}
+
+.checkout-footer {
+  margin-top: auto;
+  padding-top: 20px;
+  border-top: 1px solid #ccc;
+}
+
+.checkout-button {
+  background-color: green;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 10px;
+  width: 100%;
+}
+
+.checkout-button:hover {
+  background-color: #056105;
 }

@@ -32,16 +32,11 @@ export const basketSlice= createSlice({
         addToBasket: (state, action) => {
             const findProduct = state.product && state.product.find((product) => product.id === action.payload.id);
             if (findProduct) {
-                const extractedProducts = state.product.filter((product)=> product.id != action.payload.id);
-                
-                findProduct.count = findProduct.count + action.payload.count;
-                state.product = [...extractedProducts, findProduct];
-                writeFromBasketToStorage(state.product);
+            findProduct.count += 1;
+            } else {
+            state.product.push({ ...action.payload, count: 1 });
             }
-            else {
-                state.product = [ ...state.product, action.payload ];
-                writeFromBasketToStorage(state.product);    
-            }},
+            },
             setDrawer  : (state) => {
                 state.drawer = !state.drawer;
             },

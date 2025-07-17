@@ -21,10 +21,12 @@ function ProductDetails() {
     const increment = () => {
         setCount(count + 1);
     }
-    const decrement = () => {
+    const decreaseCount = () => {
+    if (count > 0) {
         setCount(count - 1);
-    
     }
+    };
+
 
 
     const addBasket = () => {
@@ -64,7 +66,7 @@ const getProductById = () => {
         <h1 style={{fontFamily:'arial', fontSize:'50px', fontWeight:'bold'}}>{price}</h1>
         
         <div style={{display:'flex', alignItems:'center'}}>
-            <CiCirclePlus onClick={increment} style={{fontSize:'40px', marginRight:'5px'}}/> <span style={{fontSize:'35px'}}>{count}</span> <CiCircleMinus onClick={decrement} style={{fontSize:'40px',marginLeft:'5px'}}/>
+            <CiCirclePlus onClick={increment} style={{fontSize:'40px', marginRight:'5px'}}/> <span style={{fontSize:'35px'}}>{count}</span> <CiCircleMinus onClick={decreaseCount} style={{fontSize:'40px',marginLeft:'5px'}}/>
 
         </div>
 

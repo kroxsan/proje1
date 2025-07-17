@@ -50,9 +50,11 @@ function App() {
 
        }
         
-      <div>
-        <p>toplam tutar: {totalAmount}</p>
-      </div>      
+      <div className='checkout-footer'>
+      <p style={{ fontWeight: 'bold' }}>Toplam Tutar: {totalAmount.toFixed(2)} USD</p>
+      <button className='checkout-button'>Siparişi Tamamla</button>
+      </div>
+     
       
           
       </Drawer>
